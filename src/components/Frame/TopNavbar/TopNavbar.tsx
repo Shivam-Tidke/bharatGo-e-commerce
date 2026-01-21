@@ -20,7 +20,7 @@ export default function Topbar() {
 
   return (
     <header className="">
-      <div className="flex fixed top-0 left-0 p-3 z-50  py-6 flex-col items-center w-full border-b border-gray-200">
+      <div className="flex fixed top-0 left-0 bg-white p-3 z-50  py-6 flex-col items-center w-full border-b border-gray-200">
 
         <div className=" max-w-7xl w-full cursor-pointer flex items-center justify-between">
         
@@ -41,7 +41,6 @@ export default function Topbar() {
           ))}
         </nav>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
             <span>{userEmail}</span>
             <Link href="/orders">My Orders</Link>
@@ -54,7 +53,6 @@ export default function Topbar() {
             </Link>
           </div>
 
-          {/* Mobile User Icon */}
           <button
             onClick={() => setOpen(!open)}
             className="relative md:hidden pr-4"
@@ -63,10 +61,8 @@ export default function Topbar() {
           </button>
         </div>
 
-        {/* Categories */}
         
 
-        {/* Mobile Dropdown */}
         {open && (
           <div className="absolute right-4 top-14 z-50 w-56 rounded-md border shadow-md md:hidden">
         
@@ -97,8 +93,6 @@ export default function Topbar() {
             >
               <ShoppingCart size={16} /> Cart ({cartCount})
             </Link>
-
-           
           </div>
         )}
       </div>
