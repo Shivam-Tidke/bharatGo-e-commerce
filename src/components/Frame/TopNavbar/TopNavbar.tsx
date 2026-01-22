@@ -33,7 +33,6 @@ export default function Topbar() {
         <div className=" max-w-7xl w-full cursor-pointer flex items-center justify-between">
 
           <nav className=" flex gap-4 xl:px-0 2xl:px-0 px-6 overflow-x-auto text-sm text-gray-600">
-            {/* Logo */}
             <Link href="/" className=" md:block hidden text-lg font-semibold">
               Shopi
             </Link>
@@ -73,7 +72,7 @@ export default function Topbar() {
 
 
         {open && (
-          <div className="absolute right-4 top-14 z-50 w-56 rounded-md border shadow-md md:hidden">
+          <div className="absolute bg-white right-4 top-14 z-50 w-56 rounded-md border shadow-md md:hidden">
 
             <Link
               href="/orders"
@@ -97,8 +96,8 @@ export default function Topbar() {
             </Link>
 
 
-            <button onClick={openCart} className="relative">
-              <ShoppingCart size={18} />
+            <button onClick={openCart} className="relative mx-4 my-2">
+              <ShoppingCart size={16} />
               <span className="absolute -right-2 -top-2 h-4 w-4 rounded-full bg-black text-white text-xs flex items-center justify-center">
                 {cartCount}
               </span>

@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import ProductCard from '../ProductCard/ProductCard'
 import { Product } from '@/src/Types/ApiResponse'
 import { X } from 'lucide-react'
+import ProductCard from '../Frame/ProductCard/ProductCard'
 
-export default function HomePage() {
+export default function Clothes() {
     const [products, setProducts] = useState<Product[]>([])
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
     const [loading, setLoading] = useState(true)
@@ -14,7 +14,7 @@ export default function HomePage() {
         async function fetchProducts() {
             try {
                 const res = await fetch(
-                    'https://api.escuelajs.co/api/v1/products?offset=0&limit=40'
+                    'https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=0&limit=40'
                 )
                 const data: Product[] = await res.json()
                 setProducts(data)
@@ -34,7 +34,7 @@ export default function HomePage() {
 
     return (
         <main className="mx-auto max-w-7xl px-4 pt-28 pb-10">
-            <h1 className="text-center text-lg font-medium mb-6">Home</h1>
+            <h1 className="text-center text-lg font-medium mb-6">Clothes</h1>
             <div className="my-6 flex justify-center">
                 <input
                     placeholder="Search a product"
@@ -42,7 +42,7 @@ export default function HomePage() {
                 />
             </div>
 
-            <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:px-25 xl:px-25 px-10  ">
+            <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:px-25 xl:px-25 px-10 ">
                 {products.map((product) => (
                     <ProductCard
                         key={product.id}
@@ -53,7 +53,7 @@ export default function HomePage() {
             </section>
 
             {selectedProduct && (
-                <div className=" fixed right-0 top-20 rounded h-full w-96 bg-white border p-4 z-50">
+                <div className="fixed right-0 top-20 rounded h-full w-96 bg-white border p-4 z-50">
                     <div className='flex items-center justify-between mb-4'>
                         <h2 className="text-lg font-semibold">Detail</h2>
                         <button

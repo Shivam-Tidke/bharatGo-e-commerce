@@ -23,7 +23,7 @@ export default function CartDrawer() {
 
 
   return (
-    <div className="fixed right-0 top-20 h-full w-96 bg-white border-l p-4 z-50">
+    <div className="fixed right-0 top-20 rounded h-full w-96 bg-white border p-4 z-50">
       <button className="absolute right-4 top-4" onClick={closeCart}>
         ✕
       </button>

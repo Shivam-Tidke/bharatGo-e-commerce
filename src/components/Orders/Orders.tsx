@@ -10,10 +10,23 @@ export default function OrdersPage() {
     setOrders(data)
   }, [])
 
-  if (!orders.length) {
-    return <p className="pt-28 text-center">No orders yet</p>
-  }
   
+  
+    if (!orders.length) {
+    return (
+      <main className="pt-28 flex flex-col items-center justify-center text-center">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+          alt="No orders"
+          className="h-32 mb-4 opacity-80"
+        />
+        <h2 className="text-lg font-semibold">My Orders</h2>
+        <p className="text-gray-500 mt-2">
+          Nothing yet, add some products and check them out :)
+        </p>
+      </main>
+    )
+  }
 
   return (
     <main className="pt-28 max-w-xl mx-auto px-4">

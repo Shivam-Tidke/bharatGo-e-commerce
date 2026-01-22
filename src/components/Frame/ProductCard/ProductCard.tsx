@@ -23,7 +23,11 @@ export default function ProductCard({ product, onSelect }: Props): JSX.Element {
         />
         
         <button
-        onClick={()=> addToCart(product)} 
+        onClick={(e)=> {
+          e.preventDefault();
+          e.stopPropagation();  
+          addToCart(product)
+        }} 
          className="absolute right-2 top-2 h-8 w-8 rounded-full bg-white shadow">
           +
         </button>
