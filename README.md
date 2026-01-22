@@ -5,7 +5,7 @@ This project is a frontend e-commerce application built using **Next.js and Reac
 
 ## Live Demo
 
-https://fsd-assignment.netlify.app/
+https://bharat-go-e-commerce.vercel.app/
 
 ---
 
