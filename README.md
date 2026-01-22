@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 E-commerce Frontend Clone
 
-## Getting Started
+This project is a frontend e-commerce application built using **Next.js and React**
 
-First, run the development server:
+
+## Live Demo
+
+https://fsd-assignment.netlify.app/
+
+---
+
+## GitHub Repository
+
+https://github.com/Shivam-Tidke/bharatGo-e-commerce
+
+---
+
+##  Tech Stack
+
+- Next.js (React)
+- Tailwind CSS
+- Platzi Fake Store API
+
+##  Features
+
+- Product listing from API
+- Add to cart functionality
+- Increase / decrease product quantity
+- Remove items from cart
+- Cart drawer accessible from the topbar
+- Mock checkout flow
+- Orders page
+- Orders stored in localStorage
+- Responsive UI (mobile & desktop)
+
+---
+
+##  Application Flow
+
+1. Products are fetched from the Platzi Fake API
+2. Users can browse products by category
+3. Products can be added to the cart
+4. Cart opens from the topbar
+5. Users can update quantity or remove items
+6. On checkout, cart items are saved as orders
+7. Orders are displayed on the **My Orders** page
+
+---
+
+##  How to Run Locally
 
 ```bash
+git clone <your-repo-url>
+cd project-folder
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
