@@ -1,4 +1,5 @@
 
+import { useCart } from "@/src/context/cartContext"
 import { Product } from "@/src/Types/ApiResponse"
 import { JSX } from "react"
 
@@ -10,6 +11,7 @@ type Props = {
 
 export default function ProductCard({ product, onSelect }: Props): JSX.Element {
   const image = product.images?.[0] || 'https://placehold.co/600x400'
+  const {addToCart} = useCart();
    
   return (
     <div className="cursor-pointer"  onClick={() => onSelect(product)}>
@@ -20,7 +22,9 @@ export default function ProductCard({ product, onSelect }: Props): JSX.Element {
           className="h-full w-full object-cover"
         />
         
-        <button className="absolute right-2 top-2 h-8 w-8 rounded-full bg-white shadow">
+        <button
+        onClick={()=> addToCart(product)} 
+         className="absolute right-2 top-2 h-8 w-8 rounded-full bg-white shadow">
           +
         </button>
 

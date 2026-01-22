@@ -14,7 +14,7 @@ export default function HomePage() {
         async function fetchProducts() {
             try {
                 const res = await fetch(
-                    'https://api.escuelajs.co/api/v1/products?offset=0&limit=20'
+                    'https://api.escuelajs.co/api/v1/products?offset=0&limit=40'
                 )
                 const data: Product[] = await res.json()
                 setProducts(data)
@@ -38,11 +38,11 @@ export default function HomePage() {
             <div className="my-6 flex justify-center">
                 <input
                     placeholder="Search a product"
-                    className="w-full max-w-md rounded-md border px-4 py-2"
+                    className="w-full max-w-sm rounded-md border px-4 py-4"
                 />
             </div>
 
-            <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-25 ">
                 {products.map((product) => (
                     <ProductCard
                         key={product.id}
